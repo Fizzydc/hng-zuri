@@ -12,6 +12,7 @@ body {
   background-size:cover;
   background-position: center;
   color: #fff;
+  text-align: center;
 }
 
 header{
@@ -54,7 +55,6 @@ p{
   font-size: 1.3em;
   margin-bottom:11px;
 }
-
 /* styling the frontend track section differently*/
 section:last-child {
   background-color: rgba(255, 255, 255, 0.4);
@@ -65,8 +65,8 @@ section:last-child {
 
 .center-container{
       display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
+      justify-content: center;
+      align-items: center;
       margin-top:20px;
   }
 
