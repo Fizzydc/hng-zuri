@@ -1,13 +1,19 @@
-function updateUTCTime() {
-    const utcTimeElement = document.getElementById('utc-time');
-      const currentTimeMillis = new Date().getTime();
-      const currentTimeUTC = new Date(currentTimeMillis).toUTCString();
-      utcTimeElement.textContent = currentTimeUTC;
-  
-      console.log("UTC Time uploaded")
-  }
-  
-  document.getElementById('refresh-btn').addEventListener('click', updateUTCTime);
-  
-  // Initial time update
-  updateUTCTime();
+const date = new Date()
+
+const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+
+const today = days[date.getDay()-1]
+
+
+
+const updateTime = () => {
+  const date = new Date()
+  timeUtc.textContent = date.getTime()
+}
+
+const todayTag = document.getElementById('today')
+const timeUtc = document.getElementById('utc')
+
+todayTag.textContent=today
+
+setInterval(updateTime,1)
